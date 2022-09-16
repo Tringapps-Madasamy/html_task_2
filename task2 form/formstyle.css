@@ -1,0 +1,167 @@
+.parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+label {
+    display: inline-block;
+    width: 200px
+}
+
+input {
+    display: inline-block;
+    height: 30px;
+}
+
+.child1 {
+    background-color: lightslategray;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 2px solid black;
+}
+
+.formdata {
+    background-color: lightslategray;
+    border-collapse: collapse;
+}
+
+@media only screen and (max-width: 800px) {
+    .parent {
+        flex-direction: column;
+    }
+
+    table {
+        width: 50%;
+        border-collapse: collapse;
+        float: left;
+        margin-top: 50px;
+        margin-left: 30px;
+        background-color: lightpink;
+        border: 1px solid #cdcdcd;
+
+    }
+
+    th,
+    td {
+        border: 1px solid #cdcdcd;
+        padding: 2px;
+        color: #070707;
+
+    }
+
+}
+
+@media only screen and (max-width:760px),
+(min-device-width: 768px) and(max-device-width:1024px) {
+
+    table,thead,tbody,th,td,tr {
+        display: block;
+    }
+
+    th {
+        background: #c5c5c5;
+    }
+
+    table {
+        border-collapse: collapse;
+        border: 1px solid #cdcdcd;
+        width: 100%;
+        margin-left: auto;
+    }
+
+    th,
+    td {
+        border: 1px solid #cdcdcd;
+        padding: 2px;
+    }
+}
+
+@media screen and (max-width:760px),
+(min-device-width: 768px) and(max-device-width:1024px) {
+
+    table,thead,tbody,th,td,tr {
+        display: block;
+    }
+
+    thead th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+
+    }
+
+    tr {
+        border-bottom: 1px solid black;
+    }
+
+    td {
+        border: none;
+        border-bottom: 1 px solid black;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+
+    }
+
+    td:nth-of-type(1):before {
+        content: "ID";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Email";
+    }
+
+    td:nth-of-type(3):before {
+        content: "FirstName";
+    }
+
+    td:nth-of-type(4):before {
+        content: "LastName";
+    }
+
+    td:nth-of-type(5):before {
+        content: "PhoneNumber";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Dob";
+    }
+
+    td:nth-of-type(7):before {
+        content: "Gender";
+    }
+
+    td:nth-of-type(8):before {
+        content: "Action";
+    }
+}
+
+@media screen and (min-device-width: 320px) and(max-device-width:480px) {
+    body {
+        padding: 0;
+        margin: 0;
+        width: 320px;
+
+    }
+
+}
+
+@media screen and (min-device-width: 768px) and(max-device-width:1024px) {
+    body {
+        width: 495px;
+
+    }
+
+}
